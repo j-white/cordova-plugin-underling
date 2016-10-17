@@ -27,9 +27,9 @@
       <feature name="Underling">
         <param name="ios-package" value="CDVUnderling"/>
       </feature>
-      <framework src="src/ios/Underling.framework" custom="true" />
-      <header-file src="src/ios/CDVUnderling.h" />
-      <source-file src="src/ios/CDVUnderling.m" />
     </config-file>
+    <framework src="src/ios/Underling.framework" custom="true" />
+    <header-file src="src/ios/CDVUnderling.h" />
+    <source-file src="src/ios/CDVUnderling.m" />
   </platform>
 </plugin>
