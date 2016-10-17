@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-underling",
+  "version": "0.0.1",
+  "description": "Underling on Mobile",
+  "cordova": {
+    "id": "cordova-plugin-underling",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:j-white/cordova-plugin-underling.git"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Jesse White",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/j-white/cordova-plugin-underling/issues"
+  },
+  "homepage": "https://github.com/j-white/cordova-plugin-underling",
+  "scripts": {
+    "test": "jasmine-node --color spec"
+  },
+  "devDependencies": {
+    "jasmine-node": "1.14.5",
+    "pluginpub": "^0.0.5"
+  }
+}

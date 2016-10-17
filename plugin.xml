@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:rim="http://www.blackberry.com/ns/widgets" id="cordova-plugin-underling" version="0.0.1">
+  <name>Underling</name>
+  <description>Underling on Mobile</description>
+  <license>AGPL-3.0</license>
+  <repo>git+https://github.com:j-white/cordova-plugin-underling.git</repo>
+  <issue>https://github.com/j-white/cordova-plugin-underling/issues</issue>
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+  <js-module src="www/underling.js" name="Underling">
+    <clobbers target="cordova.plugins.underling"/>
+  </js-module>
+  <platform name="android">
+    <source-file src="src/android/ca/jessewhite/underling/Underling.java" target-dir="src/ca/jessewhite/underling"/>
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Underling">
+        <param name="android-package" value="ca.jessewhite.underling.Underling"/>
+      </feature>
+    </config-file>
+    <framework src="src/android/underling.gradle" custom="true" type="gradleReference"/>
+    <resource-file src="src/android/underling.aar" target="libs/underling.aar"/>
+    <dependency id="cordova-plugin-compat" version="^1.0.0"/>
+  </platform>
+</plugin>
