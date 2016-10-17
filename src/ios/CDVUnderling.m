@@ -9,14 +9,11 @@
 
 - (void)start:(CDVInvokedUrlCommand*)command {
   CDVUnderling* __weak weakSelf = self;
-  NSString *mq = [command.arguments objectAtIndex:0];
-  NSString *opennmsId = [command.arguments objectAtIndex:1];
-  NSString *location = [command.arguments objectAtIndex:2];
-  NSString *minionId = [command.arguments objectAtIndex:3];
-  
+  NSDictionary *args = [command.arguments objectAtIndex:0];
+
   [self.commandDelegate runInBackground:^{
     NSLog(@"Starting Underling...");
-    GoBindingsStartUnderling(mq, opennmsId, location, minionId);
+    GoBindingsStartUnderling(args[@"mq"], args[@"instanceId"], args[@"location"], args[@"minionId"]);
     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [weakSelf.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
   }];
@@ -32,6 +29,5 @@
     [weakSelf.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
   }];
 }
-
 
 @end
