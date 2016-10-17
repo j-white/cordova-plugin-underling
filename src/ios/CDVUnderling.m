@@ -1,5 +1,5 @@
 #import "CDVUnderling.h"
-#import <Underling/Bindings.h>
+#import <Bindings/Bindings.h>
 
 @interface CDVUnderling()
 @end
