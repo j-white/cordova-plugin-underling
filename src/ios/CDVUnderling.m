@@ -1,4 +1,4 @@
-import "CDVUnderling.h"
+#import "CDVUnderling.h"
 #import <Underling/Bindings.h>
 
 @interface CDVUnderling()
@@ -8,7 +8,7 @@ import "CDVUnderling.h"
 }
 
 - (void)start:(CDVInvokedUrlCommand*)command {
-  CordovaHttpPlugin* __weak weakSelf = self;
+  CDVUnderling* __weak weakSelf = self;
   NSString *mq = [command.arguments objectAtIndex:0];
   NSString *opennmsId = [command.arguments objectAtIndex:1];
   NSString *location = [command.arguments objectAtIndex:2];
@@ -23,7 +23,7 @@ import "CDVUnderling.h"
 }
 
 - (void)stop:(CDVInvokedUrlCommand*)command {
-  CordovaHttpPlugin* __weak weakSelf = self;
+  CDVUnderling* __weak weakSelf = self;
   
   [self.commandDelegate runInBackground:^{
     NSLog(@"Stopping Underling...");
