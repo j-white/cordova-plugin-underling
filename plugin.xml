@@ -22,4 +22,14 @@
     <resource-file src="src/android/underling.aar" target="libs/underling.aar"/>
     <dependency id="cordova-plugin-compat" version="^1.0.0"/>
   </platform>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="Underling">
+        <param name="ios-package" value="CDVUnderling"/>
+      </feature>
+      <framework src="src/ios/Underling.framework" custom="true" />
+      <header-file src="src/ios/CDVUnderling.h" />
+      <source-file src="src/ios/CDVUnderling.m" />
+    </config-file>
+  </platform>
 </plugin>
