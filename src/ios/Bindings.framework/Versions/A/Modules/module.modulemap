@@ -1,0 +1,8 @@
+framework module "Bindings" {
+	header "ref.h"
+    header "GoBindings.h"
+    header "GoUniverse.h"
+    header "Bindings.h"
+
+    export *
+}
